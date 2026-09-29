@@ -109,8 +109,7 @@ with right:
 - The free Gemini tier has rate limits, so very large files may take a little longer.
 - Avoid uploading confidential documents while using the free tier.
 """)
-    st.link_button("GitHub link", GITHUB_URL)
-
+st.link_button("GitHub link", "https://github.com/gitwithpk-1131/rag-doc-chatbot", icon="🔗", use_container_width=True)
 st.divider()
 
 # ---------- Chat ----------
