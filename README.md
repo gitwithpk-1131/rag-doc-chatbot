@@ -1,3 +1,7 @@
+![Home screen](docs/screenshot-home.png)
+![Answer with sources](docs/screenshot-chat.png)
+![Data screen](docs/Screenshot-Data.png)
+
 # Document Q&A Chatbot
 
 Upload a PDF and ask questions about it in plain English. Every answer is written only from your document, and the passages used are shown underneath so you can check them.
