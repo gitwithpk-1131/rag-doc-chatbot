@@ -7,6 +7,8 @@
 # Data Screen
 ![Data screen](docs/Screenshot-Data.png)
 
+**Live demo:** [Open the app](https://rag-doc-chatbot-llm.streamlit.app/) 
+
 # Document Q&A Chatbot
 
 Upload a PDF and ask questions about it in plain English. Every answer is written only from your document, and the passages used are shown underneath so you can check them.
