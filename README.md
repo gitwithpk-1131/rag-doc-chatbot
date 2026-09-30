@@ -1,5 +1,5 @@
-![Home screen](docs/screenshot-home.png)
-![Answer with sources](docs/screenshot-chat.png)
+![Home screen](docs/screenshot-Home.png)
+![Answer with sources](docs/screenshot-Chat.png)
 ![Data screen](docs/Screenshot-Data.png)
 
 # Document Q&A Chatbot
