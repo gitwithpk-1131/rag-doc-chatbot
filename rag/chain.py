@@ -2,6 +2,15 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
+def to_text(content):
+    if isinstance(content, str):
+        return content
+    return "".join(
+        block.get("text", "")
+        for block in content
+        if isinstance(block, dict) and block.get("type") == "text"
+    )
+
 PROMPT = ChatPromptTemplate.from_template(
     "Answer the question using only the context below. "
     "If the answer is not in the context, say you don't know.\n\n"
@@ -16,4 +25,4 @@ def answer(vectorstore, question: str):
         temperature=0,
     )
     response = llm.invoke(PROMPT.format(context=context, question=question))
-    return response.content, docs
+    return to_text(response.content), docs
