@@ -5,6 +5,11 @@ from rag.loader import load_and_split
 from rag.vectorstore import build_vectorstore
 from rag.chain import answer
 
+def as_text(x):
+    if isinstance(x, str):
+        return x
+    return "".join(b.get("text", "") for b in x if isinstance(b, dict))
+
 st.set_page_config(page_title="RAG Document Q&A Chatbot", layout="wide")
 load_dotenv()
 
@@ -157,6 +162,7 @@ if "vs" in st.session_state:
         with st.chat_message("assistant"):
             with st.spinner("Searching your documents..."):
                 ans, sources = answer(st.session_state.vs, q)
+                ans = as_text(ans)
             st.write(ans)
             with st.expander("Sources"):
                 for d in sources:
